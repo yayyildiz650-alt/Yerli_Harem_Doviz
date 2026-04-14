@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/ana_Fragment">
+    <fragment
+        android:id="@+id/ana_Fragment"
+        android:name="Fragmentlar.Ana_Fragment"
+        android:label="fragment_ana_"
+        tools:layout="@layout/fragment_ana_" >
+        <action
+            android:id="@+id/action_ana_Fragment_to_detay_Fragment"
+            app:destination="@id/detay_Fragment" />
+        <action
+            android:id="@+id/action_ana_Fragment_to_varlik_Fragment"
+            app:destination="@id/varlik_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detay_Fragment"
+        android:name="Fragmentlar.Detay_Fragment"
+        android:label="fragment_detay_"
+        tools:layout="@layout/fragment_detay_" >
+        <action
+            android:id="@+id/action_detay_Fragment_to_ana_Fragment"
+            app:destination="@id/ana_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/varlik_Fragment"
+        android:name="Fragmentlar.Varlik_Fragment"
+        android:label="fragment_varlik_"
+        tools:layout="@layout/fragment_varlik_" >
+        <action
+            android:id="@+id/action_varlik_Fragment_to_ana_Fragment"
+            app:destination="@id/ana_Fragment" />
+    </fragment>
+</navigation>
